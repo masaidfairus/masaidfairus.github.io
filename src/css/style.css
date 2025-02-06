@@ -23,17 +23,6 @@ html {
   overflow-x: hidden;
 }
 
-body {
-  overflow: hidden;
-  width: 100%;
-}
-
-.smooth-scroll-wrapper {
-  overflow: hidden; /* Mencegah scroll tambahan */
-  will-change: transform; /* Optimasi performa untuk animasi */
-  position: relative; /* Memastikan posisi elemen */
-}
-
 html,
 body {
   margin: 0;
@@ -98,7 +87,7 @@ nav > div {
   height: 20px;
   transition: all 250ms ease-out;
   cursor: pointer;
-  will-change: transform; 
+  will-change: transform;
 }
 
 .burger::before,
@@ -156,7 +145,7 @@ nav > div {
 
 .menu-item {
   z-index: 3;
-  will-change: transform; 
+  will-change: transform;
   display: flex;
   cursor: pointer;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -253,7 +242,11 @@ body {
   background: var(--clr-dark);
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
 }
 
