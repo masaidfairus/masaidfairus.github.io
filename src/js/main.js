@@ -237,25 +237,3 @@ updateRandomNumber();
 
 // Set an interval to update the number every 5 seconds (adjust as needed)
 setInterval(updateRandomNumber, 100);
-
-// ------------------------------------------------------------------------------------------------
-
-const body = document.body,
-    scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-    height = scrollWrap.getBoundingClientRect().height - 1,
-    speeds = 0.01;
-
-var offset = 0;
-
-body.style.height = Math.floor(height) + "px";
-
-function smoothScroll() {
-    offset += (window.pageYOffset - offset) * speeds;
-
-    var scroll = "translateY(-" + offset + "px) translateZ(0)";
-    scrollWrap.style.transform = scroll;
-
-    callScroll = requestAnimationFrame(smoothScroll);
-}
-
-smoothScroll();
