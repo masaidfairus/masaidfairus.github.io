@@ -250,6 +250,10 @@ h6 {
   font-family: var(--font-heading);
 }
 
+p {
+  font-family: var(--font-body);
+}
+
 h1 {
   position: relative;
   z-index: 2; /* Pastikan berada di atas elemen lain */
