@@ -107,7 +107,7 @@
 }
 
 /*
-! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -578,10 +578,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.resize {
-  resize: both;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -650,20 +646,6 @@ html {
   overflow-x: hidden;
 }
 
-body {
-  overflow: hidden;
-  width: 100%;
-}
-
-.smooth-scroll-wrapper {
-  overflow: hidden;
-  /* Mencegah scroll tambahan */
-  will-change: transform;
-  /* Optimasi performa untuk animasi */
-  position: relative;
-  /* Memastikan posisi elemen */
-}
-
 html,
 body {
   margin: 0;
@@ -710,6 +692,10 @@ nav > div {
   font-size: 1.5rem;
   font-style: italic;
   letter-spacing: -0.1vw;
+}
+
+.info p {
+  font-family: var(--font-heading);
 }
 
 .toggle-btn {
@@ -885,7 +871,11 @@ body {
   background: var(--clr-dark);
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
 }
 

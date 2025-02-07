@@ -70,6 +70,10 @@ nav > div {
   letter-spacing: -0.1vw;
 }
 
+.info p {
+  font-family: var(--font-heading);
+}
+
 .toggle-btn {
   display: flex;
   justify-content: flex-end;
@@ -248,10 +252,6 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-}
-
-p {
-  font-family: var(--font-body);
 }
 
 h1 {
