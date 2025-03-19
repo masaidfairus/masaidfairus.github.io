@@ -1,32 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="cursor-none">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Masaid Fairus Trimarsongko</title>
-        <link rel="stylesheet" href="../../dist/output.css">
+        <link rel="stylesheet" href="../output.css">
+
         <script
             src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
             defer></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js"></script>
+
+        <script src="../js/main.js" defer></script>
     </head>
     <body>
         <div class="cursor"></div>
-        <script src="../js/main.js"></script>
-        
+
         <nav>
             <div class="info">
                 <p id="random-number">30</p>
             </div>
 
             <div class="logo">
-                <p><a href="../../index.html">Portfolio</a></p>
+                <p><a href="../index.html">Portfolio</a></p>
             </div>
 
             <div class="toggle-btn">
-                <button class="burger"
+                <button class="burger" aria-label="burger-menu"
                     onclick="this.classList.toggle('active')"></button>
             </div>
         </nav>
@@ -35,29 +37,30 @@
             <div class="overlay-menu">
                 <div class="menu-item">
                     <p><a href="#" class="nav-link"
-                            data-target="../../index.html">HOME</a></p>
+                            data-target="../index.html">HOME</a></p>
                 </div>
                 <div class="menu-item">
                     <p id="active"><a href="#" class="nav-link"
-                            data-target="about.html">ABOUT</a></p>
+                            data-target="./views/about.html">ABOUT</a></p>
                 </div>
             </div>
 
             <div class="sub-nav">
-                <p><a href="https://x.com/masaidfairus"
-                        target="_blank">Twitter</a></p>
+                <p><a href="https://x.com/masaidfairus" rel="noopener"
+                        target="_blank">TWITTER</a></p>
                 <p>.</p>
-                <p><a href="https://instagram.com/msaidfairuss"
-                        target="_blank">Instagram</a></p>
+                <p><a href="https://instagram.com/msaidfairuss" rel="noopener"
+                        target="_blank">INSTAGRAM</a></p>
                 <p>.</p>
-                <p><a href="https://github.com/masaidfairus"
-                        target="_blank">Github</a></p>
+                <p><a href="https://github.com/masaidfairus" rel="noopener"
+                        target="_blank">GITHUB</a></p>
                 <p>.</p>
-                <p><a href="https://www.linkedin.com/in/masaidfairus"
-                        target="_blank">Linkedin</a></p>
+                <p><a href="https://www.linkedin.com/in/masaidfairus" rel="noopener"
+                        target="_blank">LINKEDIN</a></p>
             </div>
         </div>
-        <main class="smooth-scroll-wrapper">
+
+        <main>
             <div
                 class="flex flex-col justify-center items-center h-screen hero">
                 <!-- Masaid Fairus -->

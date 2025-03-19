@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "@fontsource/plus-jakarta-sans";
 
 /* Define the Two Colors */
 :root {
@@ -10,32 +12,6 @@
   --clr-accent: #512da8; /* Bright Cyan */
   --font-heading: "Times New Roman", serif;
   --font-body: "Plus Jakarta Sans", sans-serif;
-}
-
-* {
-  cursor: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  overflow-x: hidden;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-main {
-  overflow: hidden; /* Mencegah scroll tambahan */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
 }
 
 .hero {
@@ -208,10 +184,11 @@ nav > div {
 body {
   font-family: var(--font-body);
   background-color: var(--clr-dark);
-  color: var(--clr-primary); /* Text color matches the neon green */
+  color: var(--clr-primary);
   margin: 0;
   padding: 0;
 }
+/* EDIT INI NANTI */
 
 .cursor {
   --circle-size: 2.5rem;

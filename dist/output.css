@@ -578,6 +578,10 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.cursor-none {
+  cursor: none;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -633,33 +637,6 @@ video {
   /* Bright Cyan */
   --font-heading: "Times New Roman", serif;
   --font-body: "Plus Jakarta Sans", sans-serif;
-}
-
-* {
-  cursor: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  overflow-x: hidden;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-main {
-  overflow: hidden;
-  /* Mencegah scroll tambahan */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
 }
 
 .hero {
@@ -834,10 +811,11 @@ body {
   font-family: var(--font-body);
   background-color: var(--clr-dark);
   color: var(--clr-primary);
-  /* Text color matches the neon green */
   margin: 0;
   padding: 0;
 }
+
+/* EDIT INI NANTI */
 
 .cursor {
   --circle-size: 2.5rem;

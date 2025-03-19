@@ -119,11 +119,6 @@ tick();
 
 // ------------------------------------------------------------------------------------------------
 
-window.onload = () => {
-    gsap.fromTo(".hero", { y: -1000 }, { y: 0, duration: 1, ease: "power2.out" });
-};
-
-
 document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(CSSRulePlugin);
     const cursor = document.querySelector('.cursor');
