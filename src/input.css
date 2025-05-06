@@ -180,6 +180,14 @@ nav > div {
   letter-spacing: 0vw;
 }
 
+@media (max-width: 320px) {
+  .sub-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 /* Body Styling */
 body {
   font-family: var(--font-body);
