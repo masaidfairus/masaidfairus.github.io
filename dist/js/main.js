@@ -232,3 +232,93 @@ updateRandomNumber();
 
 // Set an interval to update the number every 5 seconds (adjust as needed)
 setInterval(updateRandomNumber, 100);
+
+// -------------
+// Define the available project categories and their data
+const categories = ['website', 'mobile', 'etc'];
+const projects = {
+    website: [
+        { id: 1, title: 'E-commerce Platform', description: 'A robust online store with secure payment gateways.' },
+        { id: 2, title: 'Portfolio Website', description: 'Showcasing creative works with elegant design.' },
+        { id: 3, title: 'Blog System', description: 'Content management system for dynamic articles.' },
+    ],
+    mobile: [
+        { id: 4, title: 'Fitness Tracker App', description: 'Track workouts and health metrics on the go.' },
+        { id: 5, title: 'Food Delivery App', description: 'Order food from local restaurants with ease.' },
+        { id: 6, title: 'Messaging App', description: 'Real-time communication with secure encryption.' },
+    ],
+    etc: [
+        { id: 7, title: '3D Product Configurator', description: 'Interactive 3D models for product customization.' },
+        { id: 8, title: 'Smart Home Automation', description: 'Control home devices from a centralized dashboard.' },
+        { id: 9, title: 'Data Visualization Tool', 'description': 'Interactive charts and graphs for complex data.' },
+    ],
+};
+
+// Get references to DOM elements
+const categoryLinks = document.querySelectorAll('#category-navigation a');
+const projectsDisplay = document.getElementById('projects-display');
+
+// State variable for active category (default to 'website')
+let activeCategory = 'website';
+
+/**
+ * Renders the projects for the given category.
+ * @param {string} category - The category to display projects for.
+ */
+function renderProjects(category) {
+    projectsDisplay.innerHTML = ''; // Clear existing projects
+    const currentProjects = projects[category];
+
+    currentProjects.forEach(project => {
+        const projectDiv = document.createElement('div');
+        projectDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-primary transition-all duration-300';
+        projectDiv.innerHTML = `
+                                    <h3 class="text-xl font-semibold text-primary mb-2">${project.title}</h3>
+                                    <p class="text-gray-300">${project.description}</p>
+                                `;
+        projectsDisplay.appendChild(projectDiv);
+    });
+}
+
+/**
+ * Updates the active category styling.
+ * @param {string} newActiveCategory - The category to set as active.
+ */
+function updateActiveCategoryStyling(newActiveCategory) {
+    categoryLinks.forEach(link => {
+        const category = link.dataset.category;
+        if (category === newActiveCategory) {
+            link.classList.add('bg-primary', 'text-background');
+            link.classList.remove('hover:bg-primary', 'hover:text-background'); /* Ensure hover styles are removed when active */
+        } else {
+            link.classList.remove('bg-primary', 'text-background');
+            /* Re-add hover styles if it's not the active category */
+            link.classList.add('hover:bg-primary', 'hover:text-background');
+        }
+    });
+}
+
+/**
+ * Handles the click event on a category link.
+ * @param {Event} event - The click event object.
+ */
+function handleCategoryClick(event) {
+    const clickedCategory = event.currentTarget.dataset.category;
+    if (activeCategory !== clickedCategory) {
+        activeCategory = clickedCategory;
+        updateActiveCategoryStyling(activeCategory);
+        renderProjects(activeCategory);
+    }
+}
+
+// Add event listeners to each category link
+categoryLinks.forEach(link => {
+    link.addEventListener('click', handleCategoryClick);
+    // Removed mouseenter/mouseleave for content-slider as it's no longer used
+});
+
+// Initial render on page load
+document.addEventListener('DOMContentLoaded', () => {
+    updateActiveCategoryStyling(activeCategory);
+    renderProjects(activeCategory);
+});

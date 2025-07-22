@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Masaid Fairus Trimarsongko</title>
         <link rel="stylesheet" href="./output.css">
+        <link rel="shortcut icon" href="/src/components/M.svg"
+            type="image/x-icon">
 
         <script
             src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
@@ -63,7 +65,7 @@
 
         <main>
             <div
-                class="flex flex-col justify-center items-center h-screen hero">
+                class="flex flex-col justify-center items-center h-screen hero overflow-hidden">
                 <!-- Masaid Fairus -->
                 <div
                     class="flex letter-spacing-1 text-3xl md:text-5xl lg:text-6xl text-primary m-0 ">
@@ -106,60 +108,126 @@
 
             <section id="projects" class="bg-background text-white py-20 px-4">
                 <div class="max-w-6xl mx-auto">
-                    <h2 class="text-4xl mb-12 text-center tracking-tighter text-primary">My <span class="italic">Projects</span></h2>
+                    <div class="flex flex-col w-full mb-10 gap-5">
+                        <h2
+                            class="text-4xl text-left tracking-tighter text-primary">Featured
+                            <span class="italic">Projects</span>
+                        </h2>
+                        <div id="category-navigation"
+                                class="flex flex-col md:flex-row justify-center uppercase font-heading italic tracking-tighter text-3xl text-center gap-4 mb-12 text-primary">
+                                <!-- Category links with new hover effects -->
+                                <a id="category-website" class="
+                                    border border-primary py-4
+                                    w-full md:w-1/3 cursor-pointer category-link
+                                    transition-all duration-300 ease-in-out
+                                    transform
+                                    hover:bg-primary hover:text-background
+                                " data-category="website">
+                                    website.
+                                </a>
+        
+                                <a id="category-mobile" class="
+                                    border border-primary py-4
+                                    w-full md:w-1/3 cursor-pointer category-link
+                                    transition-all duration-300 ease-in-out
+                                    transform
+                                    hover:bg-primary hover:text-background
+                                " data-category="mobile">
+                                    mobile.
+                                </a>
+        
+                                <a id="category-etc" class="
+                                    border border-primary py-4
+                                    w-full md:w-1/3 cursor-pointer category-link
+                                    transition-all duration-300 ease-in-out
+                                    transform
+                                    hover:bg-primary hover:text-background
+                                " data-category="etc">
+                                    etc.
+                                </a>
+                            </div>
+        
+                            <!-- Display Projects -->
+                            <div id="projects-display"
+                                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="grid md:grid-cols-1 gap-10">
                         <!-- Project Card -->
-                        <div
-                            class="group relative overflow-hidden rounded-xl border border-gray-700">
-                            <img
-                                src="/src/components/images/biblio-thumbnail.jpg"
-                                alt="Biblio E-Library"
-                                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <a
+                            href="https://github.com/masaidfairus/biblio-e-library"
+                            target="_blank" rel="noopener" class="block">
                             <div
-                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <h3 class="text-2xl tracking-tight">Biblio
-                                    Website</h3>
+                                class="group relative overflow-hidden rounded-xl border border-primary">
+                                <img
+                                    src="/src/components/images/biblio-thumbnail.jpg"
+                                    alt="Biblio E-Library"
+                                    class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <h3
+                                        class="text-2xl tracking-tight text-white">Biblio
+                                        <span class="italic">Website</span></h3>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Project Card -->
-                        <div
-                            class="group relative overflow-hidden rounded-xl border border-gray-700">
-                            <img src="/src/components/images/company-thumbnail.jpg"
-                                alt="Company Profile"
-                                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <a
+                            href="https://masaidfairus.github.io/ruzzo-company-profile/"
+                            target="_blank" rel="noopener" class="block">
                             <div
-                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <h3 class="text-2xl tracking-tight">Company
-                                    Profile</h3>
+                                class="group relative overflow-hidden rounded-xl border border-primary">
+                                <img
+                                    src="/src/components/images/company-thumbnail.jpg"
+                                    alt="Company Profile"
+                                    class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <h3 class="text-2xl tracking-tight">Company
+                                        <span class="italic">Profile</span></h3>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Project Card -->
-                        <div
-                            class="group relative overflow-hidden rounded-xl border border-gray-700">
-                            <img src="/src/components/images/e-commerce-thumbnail.jpg"
-                                alt="E E-Commerce Website"
-                                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <a
+                            href="https://tailwind-e-commerce-ashy.vercel.app/index.html"
+                            target="_blank" rel="noopener" class="block">
                             <div
-                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <h3 class="text-2xl tracking-tight">E-Commerce
-                                    Website</h3>
+                                class="group relative overflow-hidden rounded-xl border border-primary">
+                                <img
+                                    src="/src/components/images/e-commerce-thumbnail.jpg"
+                                    alt="E E-Commerce Website"
+                                    class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <h3
+                                        class="text-2xl tracking-tight">E-Commerce
+                                        <span class="italic">Website</span></h3>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div
-                            class="group relative overflow-hidden rounded-xl border border-gray-700">
-                            <img src="/src/components/images/e-library-thumbnail.jpg"
-                                alt="E-Library Website"
-                                class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <!-- Project Card -->
+                        <a href="https://github.com/masaidfairus/e-library"
+                            target="_blank" rel="noopener" class="block">
                             <div
-                                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <h3 class="text-2xl tracking-tight">E-Library
-                                    Website</h3>
+                                class="group relative overflow-hidden rounded-xl border border-primary">
+                                <img
+                                    src="/src/components/images/e-library-thumbnail.jpg"
+                                    alt="E-Library Website"
+                                    class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <h3
+                                        class="text-2xl tracking-tight">E-Library
+                                        <span class="italic">Website</span></h3>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </section>
